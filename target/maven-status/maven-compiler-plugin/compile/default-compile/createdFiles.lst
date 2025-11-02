@@ -1,0 +1,5 @@
+com\sportviz\model\Match.class
+com\sportviz\config\CorsConfig.class
+com\sportviz\config\CorsConfig$1.class
+com\sportviz\controller\CricketController.class
+com\sportviz\SportVizApplication.class

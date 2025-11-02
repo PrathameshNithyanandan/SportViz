@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #1e40ff;
+  --primary-green: #7cff6b;
+  --dark-bg: #0a1628;
+  --dark-card: #111d2e;
+  --dark-hover: #1a2a3f;
+}
+
+body {
+  background: #f9fafb;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Gradient backgrounds */
+.gradient-blue-green {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgba(30, 64, 255, 0.1) 0%, rgba(124, 255, 107, 0.1) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e50ff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}

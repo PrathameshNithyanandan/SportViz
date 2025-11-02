@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.iml
+
+# Build outputs
+target/
+build/
+*.class
+
+# Node modules (frontend)
+node_modules/
+.next/
+app/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+src/test/
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd

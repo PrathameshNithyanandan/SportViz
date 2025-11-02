@@ -1,12 +1,15 @@
 interface UnderConstructionProps {
-  sport: string;
-  feature: string;
+  sport?: string;
+  feature?: string;
+  title?: string;
+  description?: string;
+  icon?: string;
 }
 
-export default function UnderConstruction({ sport, feature }: UnderConstructionProps) {
-  const icon = sport === 'Cricket' ? '🏏' : '⚽';
-  const title = `${sport} ${feature}`;
-  const description = `Explore ${sport.toLowerCase()} ${feature.toLowerCase()} statistics and information`;
+export default function UnderConstruction({ sport, feature, title: customTitle, description: customDescription, icon: customIcon }: UnderConstructionProps) {
+  const icon = customIcon || (sport === 'Cricket' ? '🏏' : '⚽');
+  const title = customTitle || (sport && feature ? `${sport} ${feature}` : 'Coming Soon');
+  const description = customDescription || (sport && feature ? `Explore ${sport.toLowerCase()} ${feature.toLowerCase()} statistics and information` : 'This feature is being developed');
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-8 text-center">
